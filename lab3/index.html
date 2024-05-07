@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title></title>
+
+        <!--custom stylesheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--external stylesheets-->
+        <link rel="stylesheet" href="lib/scrollmap.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+    </head>
+
+    <body>
+        <div class="content">
+             <!--title block, background image is title image-->
+            <div class="row" style="background-image:url(assets/title.png); background-size:contain;">
+                <div class="center title">
+                    <!--title text-->
+                    <h1>Bob Ross Map</h1>
+                    <!--subtitle or author-->
+                    <p class="author">Ryan Mroczenski</p>
+                </div>
+            </div>
+            <!--text content block-->
+            <div class="row">
+                <div class="center">
+                    <p>This explainer describes a web map based on paintings, by the artist Bob Ross.</p>
+                </div>
+            </div>
+            <!--side by side text and image-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/inspiration.jpg">
+                </div>
+                <div class="right">
+                    <p class="vert-center">This map makes use of the prominent colors used in the paintings Bob Ross is known for, including white/gray, green, yellow, blue, and pink.</p>
+                    <!--This map makes use of the prominant colors in Bob Ross's painting, including the green trees, yellow trees, etc-->
+                </div>
+            </div>
+
+            <!--background images with text scrolling over them (sidecar)-->
+            <div class="scroll-container">    
+                <!--background images-->
+                <div class="background-item">
+                    <img src="assets/globe1.png" data-slide="1" class="fill">
+                    <img src="assets/globe2.png" data-slide="2" class="fill hidden">
+                    <img src="assets/globe3.png" data-slide="3" class="fill hidden">
+                    <img src="assets/globe4.png" data-slide="4" class="fill hidden">
+                </div>
+                <!--foreground text blocks-->
+                <div class="foreground-item">
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">First, let's take a look at Taiwan, which gives us a sense of what the color scheme looks like on the map.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Milan, Italy, and many other locations throughout the map, show the close mix of yellow and green together, representative of the different trees along the shorelines in many of Ross's paintings.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Northern Minnesota portrays the use of colors most equally to the paintings, with gray, blue, and green being the predominant colors and slight touches of pink and yellow.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Finally, a look at Muncie, Indiana, home to the studio where the Bob Ross television series 'The Joy of Painting' was filmed, and where many of his paintings were created. Note the typeface of the labels on the map, as it is the same typeface used for both the credits and paint color inserts throughout the series.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!--slideshow content goes here-->
+                        <div class="slide">
+                            <img src="assets/zoom1.png">
+                            <p class="caption">A zoomed-out view of the Bob Ross style.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/zoom2.png">
+                            <p class="caption">A mid-scale view centered on Madison, Wisconsin.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/zoom3.png">
+                            <p class="caption">A large-scale view of the Madison region.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/zoom4.png">
+                            <p class="caption">The Madison Isthmus.</p>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+
+                        <!-- The dots/circles -->
+                        <div class="slideshow-dots">
+                            <span class="dot" id="1"></span>
+                            <span class="dot" id="2"></span>
+                            <span class="dot" id="3"></span>
+                            <span class="dot" id="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <iframe class="fit" src="https://api.mapbox.com/styles/v1/ryan405/clumu8maq00s101pb3vbo7ilo.html?title=view&access_token=pk.eyJ1IjoicnlhbjQwNSIsImEiOiJjbHVqenJsYjEwMGdoMnFvMTFtZzE5N3I5In0.rtjmf9bmbbUXqwfu4eErOQ&zoomwheel=true&fresh=true#5.53/43.91/-87.088"></iframe>
+                </div>
+            </div>
+
+            <!--credits-->
+            <div class="row no-margin">
+                <div class="center">
+                    <div class="credits">
+                        <p><b>Credits:</b></p>
+                        <p>Map created with Mapbox Studio</p>
+                        <p>Data from openstreetmap</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--external scripts-->
+        <script type="text/javascript" src="lib/scrollmap.js"></script>
+    </body>
+</html>
